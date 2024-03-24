@@ -10,7 +10,7 @@ const getNavLinkClassNames = ({ isActive }) => {
 
 const Navigation = () => {
   return (
-    <div>
+    <nav>
       <header className={css.header}>
         <NavLink className={getNavLinkClassNames} to="/">
           Home
@@ -19,7 +19,7 @@ const Navigation = () => {
           Movies
         </NavLink>
       </header>
-    </div>
+    </nav>
   );
 };
 
