@@ -15,76 +15,56 @@ export const getTrendingMovies = async () => {
   const url = "https://api.themoviedb.org/3/trending/movie/day?language=en-US";
   const searchParams = {
     headers: {
-      // Замість api_read_access_token вставте свій токен
-      Authorization: ` Bearer ${API_TOKEN}`,
+      Authorization: `Bearer ${API_TOKEN}`,
     },
   };
-  const data = await axios.get(url, searchParams);
+
+  const { data } = await axios.get(url, searchParams);
   return data.results;
 };
 
-export const getSearchMovies = async (query, page) => {
-  const url =
-    "https://api.themoviedb.org/3/search/movie?include_adult=false&language=en-US&page=1";
-
+export const getSearchMovies = async (query, page = 1) => {
+  const url = `https://api.themoviedb.org/3/search/movie?query=${query}&include_adult=false&language=en-US&page=${page}`;
   const searchParams = {
     headers: {
       Authorization: ` Bearer ${API_TOKEN}`,
     },
-    query: query,
-    page: page,
   };
-  const response = await axios.get(url, searchParams);
-  return response;
+  const { data } = await axios.get(url, searchParams);
+  return data;
 };
 
 export const getMovieDetails = async (id) => {
-  const url = "https://api.themoviedb.org/3/movie/movie_id?language=en-US";
+  const url = `https://api.themoviedb.org/3/movie/${id}?language=en-US`;
   const searchParams = {
     headers: {
       Authorization: ` Bearer ${API_TOKEN}`,
     },
-    movie_id: id,
   };
-  const response = await axios.get(url, searchParams);
-  return response;
+  const { data } = await axios.get(url, searchParams);
+  return data;
 };
 
 export const getMovieCredits = async (id) => {
-  const url =
-    "https://api.themoviedb.org/3/movie/movie_id/credits?language=en-US";
+  const url = `https://api.themoviedb.org/3/movie/${id}/credits?language=en-US`;
+
   const searchParams = {
     headers: {
       Authorization: ` Bearer ${API_TOKEN}`,
     },
-    movie_id: id,
   };
   const response = await axios.get(url, searchParams);
   return response;
 };
 
 export const getMovieReviews = async (id) => {
-  const url =
-    "https://api.themoviedb.org/3/movie/movie_id/reviews?language=en-US&page=1";
+  const url = `https://api.themoviedb.org/3/movie/${id}/reviews?language=en-US`;
+
   const searchParams = {
     headers: {
       Authorization: ` Bearer ${API_TOKEN}`,
     },
-    movie_id: id,
   };
   const response = await axios.get(url, searchParams);
   return response;
 };
-
-// export const getPhotosByQuery = async (searchQuery, pageNumber) => {
-//   const searchParams = {
-//     client_id: API_KEY,
-//     query: searchQuery,
-//     per_page: 10,
-//     page: pageNumber,
-//   };
-//   const response = await axios.get(
-//     `/search/photos/?${new URLSearchParams(searchParams).toString()}`
-//   );
-//   return response;
-// };

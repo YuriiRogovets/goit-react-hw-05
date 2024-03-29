@@ -1,0 +1,16 @@
+.moviesList {
+  margin-top: 15px;
+}
+
+.moviesListItem {
+  margin-bottom: 10px;
+}
+
+.moviesListLink {
+  text-decoration: none;
+}
+
+.moviesListLink:hover {
+  color: red;
+  text-decoration: underline;
+}

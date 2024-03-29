@@ -15,7 +15,7 @@ const Navigation = () => {
         <NavLink className={getNavLinkClassNames} to="/">
           Home
         </NavLink>
-        <NavLink className={getNavLinkClassNames} to="/movies">
+        <NavLink className={getNavLinkClassNames} to="/movies" end>
           Movies
         </NavLink>
       </header>

@@ -1,0 +1,26 @@
+.castWrap {
+  border-bottom: 2px solid rgb(171, 170, 170);
+}
+.castList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  list-style-type: none;
+}
+
+.castListItem {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  height: 430px;
+}
+
+.castImg {
+  height: 100%;
+  margin-bottom: 5px;
+  object-fit: cover;
+}
+
+.castTitle {
+  margin-bottom: 5px;
+}

@@ -1,0 +1,15 @@
+.noResult {
+  font-size: 24px;
+  font-weight: 500;
+  font-style: italic;
+  padding: 10px 0;
+  color: red;
+}
+
+.reviewsTitle {
+  margin-bottom: 5px;
+}
+
+.reviewsText {
+  margin-bottom: 10px;
+}

@@ -1,0 +1,50 @@
+.movieDetailsWrap {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  /* border-bottom: 2px solid rgb(171, 170, 170); */
+}
+
+movieDetailsImg {
+  width: 300px;
+  height: auto;
+}
+
+.imgBox {
+  display: flex;
+
+  gap: 15px;
+  padding: 15px;
+  border-bottom: 2px solid rgb(171, 170, 170);
+}
+
+.movieGenres {
+  margin-right: 15px;
+}
+
+.addInformBox {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 2px solid rgb(171, 170, 170);
+  padding: 0 15px 15px;
+}
+
+.movieDetailsTitle {
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.movieDetailsSubTitle {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.movieDetailsText {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.movieDetailsLink {
+  font-size: 20px;
+  margin-bottom: 10px;
+}

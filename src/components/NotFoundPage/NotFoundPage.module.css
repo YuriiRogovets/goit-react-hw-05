@@ -1,0 +1,26 @@
+.notFoundWrap {
+  /* box-sizing: border-box; */
+  display: block;
+  text-align: center;
+  margin: 30px auto;
+}
+
+.notFoundTitle {
+  font-size: 42px;
+  color: rgb(49, 48, 48);
+  margin-bottom: 50px;
+}
+
+.notFoundLink {
+  border: none;
+  padding: 5px 15px;
+  border-radius: 15px;
+  background-color: rgb(119, 165, 239);
+  text-decoration: none;
+  color: rgb(49, 48, 48);
+  font-size: 28px;
+}
+
+.notFoundLink:hover {
+  background-color: rgb(70, 125, 212);
+}
